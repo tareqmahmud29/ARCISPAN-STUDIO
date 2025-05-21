@@ -1,0 +1,638 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Developer Profile</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .profile-container {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .profile-header {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 40px;
+            background: white;
+            animation: blink 1s infinite;
+            position: relative;
+            top: 5px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        .profile-content {
+            display: flex;
+            padding: 40px;
+        }
+        
+        .profile-image {
+            flex: 1;
+            padding-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        .profile-info {
+            flex: 1.5;
+        }
+        
+        .bio {
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+        
+        .about-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3);
+        }
+        
+        .about-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 123, 213, 0.4);
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: #3a7bd5;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-content {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            .profile-image {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1 class="name" id="typed-name"></h1>
+            <div class="title">BUILDING DEVELOPER & ARCHITECT</div>
+        </div>
+        
+        <div class="profile-content">
+            <div class="profile-image">
+                <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Building Developer">
+            </div>
+            
+            <div class="profile-info">
+                <p class="bio">
+                    I'm a New York based building developer & architect focused on crafting sustainable and innovative structures. I am passionate about creating spaces that elevate quality of life while respecting the environment. With over 15 years of experience, I bring vision and precision to every project.
+                </p>
+                
+                <a href="#" class="about-btn">MORE ABOUT ME</a>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>+1 (555) 123-4567</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>developer@example.com</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>New York, USA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Font Awesome for icons -->
+<!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Typing Animation Script -->
+<!-- <script>
+        const name = "I'M STEVE MILNER.";
+        const typedName = document.getElementById('typed-name');
+        let i = 0;
+        let cursorVisible = true;
+        
+        // Create cursor element
+        const cursor = document.createElement('span');
+        cursor.className = 'typing-cursor';
+        typedName.appendChild(cursor);
+        
+        function typeWriter() {
+            if (i < name.length) {
+                // Insert character before cursor
+                cursor.insertAdjacentText('beforebegin', name.charAt(i));
+                i++;
+                setTimeout(typeWriter, 150);
+            } else {
+                // Animation complete - make cursor blink continuously
+                setInterval(() => {
+                    cursor.style.opacity = cursorVisible ? '0' : '1';
+                    cursorVisible = !cursorVisible;
+                }, 500);
+            }
+        }
+        
+        // Start typing animation when page loads
+        window.onload = function() {
+            setTimeout(typeWriter, 500);
+        };
+    </script> -->
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Developer Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --day-bg: #f8f9fa;
+            --day-text: #333;
+            --day-primary: #c57a34ea;
+            --day-secondary: #ffa600;
+            --day-card: #fff;
+
+            --night-bg: #121212;
+            --night-text: #f1f1f1;
+            --night-primary: #6a3093;
+            --night-secondary: #a044ff;
+            --night-card: #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.5s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--day-bg);
+            color: var(--day-text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body.night-mode {
+            background-color: var(--night-bg);
+            color: var(--night-text);
+        }
+
+        .profile-container {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Add to your CSS */
+        .social-media {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .social-media h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icon i {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            width: 60px;
+            height: 60px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            color: var(--accent);
+        }
+
+        .social-icon:hover i {
+            background: var(--accent);
+            color: rgb(212, 143, 78);
+        }
+
+        .social-icon span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .left-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5vw;
+            position: relative;
+            z-index: 1;
+        }
+
+        .right-panel {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .profile-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            position: relative;
+            line-height: 1.2;
+        }
+
+        .typing-text {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: currentColor;
+            animation: blink 1s infinite;
+            position: relative;
+            top: 0.1em;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .title {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--day-primary);
+        }
+
+        body.night-mode .title {
+            color: var(--night-primary);
+        }
+
+        .bio {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .about-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--day-primary), var(--day-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3);
+            margin-bottom: 3rem;
+        }
+
+        body.night-mode .about-btn {
+            background: linear-gradient(135deg, var(--night-primary), var(--night-secondary));
+            box-shadow: 0 4px 15px rgba(106, 48, 147, 0.3);
+        }
+
+        .about-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 123, 213, 0.4);
+        }
+
+        body.night-mode .about-btn:hover {
+            box-shadow: 0 6px 20px rgba(106, 48, 147, 0.4);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(58, 123, 213, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: var(--day-primary);
+        }
+
+        body.night-mode .contact-icon {
+            background: rgba(106, 48, 147, 0.2);
+            color: var(--night-primary);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--day-card);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        body.night-mode .theme-toggle {
+            background: var(--night-card);
+        }
+
+        .theme-toggle i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column-reverse;
+            }
+
+            .right-panel {
+                height: 50vh;
+                flex: none;
+            }
+
+            .left-panel {
+                padding: 40px 30px;
+            }
+
+            .theme-toggle {
+                top: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body class="day-mode">
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <div class="profile-container">
+        <div class="left-panel">
+            <h1 class="name">
+                <span class="typing-text" id="typed-name"></span>
+                <span class="typing-cursor"></span>
+            </h1>
+            <div class="title">Construction & Architecture</div>
+
+            <p class="bio">
+                I'm a city & village based building Construction & Architecture focused on crafting sustainable and
+                innovative
+                structures. I am passionate about creating spaces that elevate quality of life while respecting the
+                environment. With over 15 years of experience, I bring vision and precision to every project.
+            </p>
+
+            <!-- <a href="#" class="about-btn">MORE ABOUT ME</a> -->
+
+            <div class="social-media">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/14oJLBEZxo/" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/yourcompany" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <img src="me.jpg" alt="Building Developer" class="profile-image">
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script>
+        // Typing Animation
+        const name = "MD. Mehedi Hasan";
+        const typedName = document.getElementById('typed-name');
+        let i = 0;
+
+        function typeWriter() {
+            if (i < name.length) {
+                typedName.innerHTML += name.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('night-mode');
+
+            if (body.classList.contains('night-mode')) {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+
+        // Start animations when page loads
+        window.onload = function () {
+            setTimeout(typeWriter, 500);
+        };
+    </script>
+    <footer>
+        <div class="copyright">
+            <p class="developer-credit">Developed by <a href="https://tarekmahmud.com" target="_blank">Tarek Mahmud</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
