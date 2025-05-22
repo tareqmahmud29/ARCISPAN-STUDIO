@@ -7,7 +7,33 @@
     <title>Arcispan Studio - Innovative Architectural Solutions</title>
     <!-- Add this in the <head> section -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
+        .btn3 {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #25D366;
+            /* WhatsApp green */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn3 i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .btn3:hover {
+            background-color: #1ebe5d;
+        }
+
+
         /* Loading Animation Styles */
         .loading-screen {
             position: fixed;
@@ -268,7 +294,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -994,7 +1021,14 @@
     <section class="section" id="contact">
         <div class="section-title">
             <h2>Contact Us</h2>
-            <p>Ready to start your project? Get in touch with us today.</p>
+            <!-- <button rel="form.html" class="btn">BOOK APPOINTMENT</button> -->
+            <a class="btn3" href="https://wa.me/8801331592532?text=Hello,%20I%20want%20to%20book%20an%20appointment"
+                target="_blank">
+                <i class="fab fa-whatsapp"></i> BOOK APPOINTMENT
+            </a>
+
+            <a href=""></a>
+            <!-- <p>Ready to start your project? Get in touch with us today.</p> -->
         </div>
         <div class="contact-container">
             <div class="contact-info">
@@ -1010,11 +1044,11 @@
                 <div class="social-media">
                     <h3>Connect With Us</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon">
+                        <a href="https://www.facebook.com/share/16UQh5VysM/" target="_blank" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
                             <span>Facebook</span>
                         </a>
-                        <a href="https://www.tiktok.com/@yourusername" target="_blank" class="social-icon">
+                        <a href="https://vm.tiktok.com/ZShGVg2VY/" target="_blank" class="social-icon">
                             <i class="fab fa-tiktok"></i>
                             <span>TikTok</span>
                         </a>
@@ -1032,65 +1066,6 @@
                         </a>
                     </div>
                 </div>
-                <form id="appointmentForm">
-                    <div class="form-group">
-                        <label for="name">Full Name*</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn">Book Appointment</button>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const scriptURL = 'YOUR_WEB_APP_URL';
-                            const form = document.getElementById('appointmentForm');
-
-                            form.addEventListener('submit', e => {
-                                e.preventDefault();
-
-                                const data = {
-                                    name: form.name.value,
-                                    email: form.email.value,
-                                    phone: form.phone.value,
-                                    message: form.message.value
-                                };
-
-                                fetch(scriptURL, {
-                                    method: 'POST',
-                                    body: JSON.stringify(data),
-                                    headers: {
-                                        'Content-Type': 'application/json'
-                                    }
-                                })
-                                    .then(response => response.text())
-                                    .then(responseText => {
-                                        console.log('Response:', responseText);
-                                        alert('Appointment booked successfully!');
-                                        form.reset();
-                                    })
-                                    .catch(error => {
-                                        console.error('Error!', error.message);
-                                        alert('Something went wrong. Please try again.');
-                                    });
-                            });
-                        });
-
-                    </script>
-                </form>
                 <!-- <form id="appointmentForm">
                     <div class="form-group">
                         <label for="name">Name</label>
